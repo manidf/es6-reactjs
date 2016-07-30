@@ -22,7 +22,7 @@ const _removeItem = ( item ) => {
 }
 
 const _findCartItem = ( item ) => {
-    return _cartItems.find( cartItems => cartItem.id === item.id )
+    return _cartItems.find( cartItems => cartItem.id === item.id );
 }
 
 const _increaseItem = ( item ) => item.qty++;
@@ -30,7 +30,7 @@ const _increaseItem = ( item ) => item.qty++;
 const _decreaseItem = ( item ) => {
     item.qty--;
     if ( item.qty === 0 ) {
-        _removeItem( item )
+        _removeItem( item );
     }
 }
 
@@ -53,15 +53,15 @@ const _cartTotals = ( qty = 0, total = 0 ) => {
 
 const AppStore = Object.assign(EventEmitter.prototype, {
     emitChange(){
-        this.emit( CHANGE_EVENT )
+        this.emit( CHANGE_EVENT );
     },
     
     addChangeListener( callback ) {
-        this.on( CHANGE_EVENT, callback )
+        this.on( CHANGE_EVENT, callback );
     },
     
     removeChangeListener( callback ) {
-        this.removeListener( CHANGE_EVENT, callback )
+        this.removeListener( CHANGE_EVENT, callback );
     },
     
     getCart() {
@@ -96,6 +96,6 @@ const AppStore = Object.assign(EventEmitter.prototype, {
 
         AppStore.emitChange();
     })
-})
+});
 
 export default AppStore;
