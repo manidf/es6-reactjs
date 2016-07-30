@@ -14,6 +14,7 @@ class App extends React.Component {
 }
 
 App.propTypes = {
+	
 	txt: React.propTypes.string,
 	cat: React.propTypes.number.isRequired
 }

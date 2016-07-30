@@ -2,7 +2,7 @@ module.exports = {
 	entry: './index.js',
 	output: {
 		path: './public/',
-		filename: 'index.js'
+		filename: 'app.js'
 	},
 	devServer: {
 		inline: true,
