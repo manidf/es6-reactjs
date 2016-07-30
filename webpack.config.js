@@ -1,17 +1,17 @@
 module.exports = {
-	entry: './main.js',
+	entry: './index.js',
 	output: {
-		path: './',
+		path: './public/',
 		filename: 'index.js'
 	},
 	devServer: {
 		inline: true,
-		port: 3030
+		port: 3080
 	},
 	module: {
 		loaders: [
 			{
-				test: /\.js$/,
+				test: /\.jsx$/,
 				exclude: /node_modules/,
 				loader: 'babel',
 				query: {
