@@ -4,13 +4,13 @@ import CatalogItem from './app-catalog-item';
 
 
 function getCatalog() {
-    return { items: AppStore.getCatalog };
+    return { items: AppStore.getCatalog() };
 }
 
 class Catalog extends React.Component {
     constructor() {
         super();
-        this.state = getCatalog;
+        this.state = getCatalog()
     }
     
     render () {
@@ -18,7 +18,7 @@ class Catalog extends React.Component {
             return <CatalogItem key={item.id} item={item} />
         });
         return (
-            <div className="row">
+            <div className="mdl-grid">
                 {items}
             </div>
         )

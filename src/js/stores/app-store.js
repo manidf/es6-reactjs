@@ -65,12 +65,12 @@ const AppStore = Object.assign(EventEmitter.prototype, {
     },
     
     getCart() {
-        return _cartItems;
+        return cartItems;
     },
 
     getCatalog() {
         return _catalog.map(item => {
-            return Object.assign( {}, item, _cartItems.find( cItem => cItem.id === item.id) );
+            return Object.assign( {}, item, cartItems.find( cItem => cItem.id === item.id) );
         });
     },
 
