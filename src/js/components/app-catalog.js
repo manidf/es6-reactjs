@@ -10,7 +10,7 @@ function getCatalog() {
 class Catalog extends React.Component {
     constructor() {
         super();
-        this.state = getCatalog()
+        this.state = getCatalog();
     }
     
     render () {
@@ -21,7 +21,7 @@ class Catalog extends React.Component {
             <div className="mdl-grid">
                 {items}
             </div>
-        )
+        );
     }
 }
 
