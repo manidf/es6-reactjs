@@ -19,11 +19,11 @@ var cartItems = [];
 
 const _removeItem = ( item ) => { 
     _cartItems.splice( _cartItems.findIndex( i => i === item ), 1 );
-}
+};
 
 const _findCartItem = ( item ) => {
     return _cartItems.find( cartItems => cartItem.id === item.id );
-}
+};
 
 const _increaseItem = ( item ) => item.qty++;
 
@@ -32,7 +32,7 @@ const _decreaseItem = ( item ) => {
     if ( item.qty === 0 ) {
         _removeItem( item );
     }
-}
+};
 
 const _addItem = ( item ) => {
     const cartItem = _findCartItem( item );
@@ -41,7 +41,7 @@ const _addItem = ( item ) => {
     } else {
         _increaseItem( cartItem );
     }
-}
+};
 
 const _cartTotals = ( qty = 0, total = 0 ) => {
     _cartItems.forEach( cartItems => {
@@ -49,7 +49,7 @@ const _cartTotals = ( qty = 0, total = 0 ) => {
         total += cartItem.qty * cartItem.cost;
     });
     return {qty, total};
-}
+};
 
 const AppStore = Object.assign(EventEmitter.prototype, {
     emitChange(){
